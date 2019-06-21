@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* CSS Document */
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+section {
+	display:grid;
+	margin-bottom:0.1em;	
+}
+article {
+	background-color: #4fc3f7;
+	font-family: 'Lato', sans-serif;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article h1 {
+	margin: 0;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+	text-align: center;
+	padding-left:0.5em;
+}
+
+#CabeceraPagina{
+   overflow:hidden; 
+   /*background:-webkit-linear-gradient(top, #99CC00, #99CC99 30%);*/
+   background-color:#99CC00;
+}
+#CabeceraPagina h1{
+  font-size:200%;
+  text-align:center;
+  line-height:0%;
+  font-variant:small-caps;
+}
+
+/*Barra de navegación cabecera*/ 
+#barra{
+   background-color:#FF6600;
+   height:50px;
+   padding:5px;
+}
+
+/*#barra ul li:nth-child(1){
+  background:#FFFFFF;
+}
+#barra ul li:nth-child(2){
+  background: #CCCCCC;
+}
+#barra ul li:nth-child(3){
+  background: #999999;
+}*/
+  
+#barra ul li {
+  display:inline;
+  margin:10px;
+  background-color:#E4E4E4;
+  padding:5px 10px 5px 10px;
+  box-shadow:0 0 10px #360;
+  border-radius:1em;
+}
+
+#main {
+	border-top:solid 1px #01579b; 	
+	border-bottom:solid 1px #01579b;
+}
+#main div {
+	border-bottom:solid 1px #01579b;
+	padding-right:1em;
+}
+
+/*Estos elementos no los tengo en la pagina
+#main div span {
+	display: inline-block;
+	width: 15rem;
+	padding-left: 0.5em;
+	font-weight: bold;	
+	box-sizing:border-box;
+}
+button {
+	background-color:#81d4fa;	
+	padding:0.3rem;
+	border-radius:5px;
+	border:solid 1px #0288d1;
+	margin-top:0.3em;
+	margin-bottom:0.3em;
+	width:8em;
+	cursor:pointer;
+}
+button:hover {
+	background-color:#0277bd;
+	color:white;	
+}
+#main .new {
+	margin-left: 15.2rem;
+}
+Hasta aqui no esta en la página web*/
+
+/* NAV */
+nav {
+	margin-bottom:0.1em;
+	font-family: 'Lato', sans-serif;
+	
+}
+nav ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	display:flex;
+}
+nav li { flex-grow: 1; }
+nav a {
+	display: block;
+	padding: 1em;
+	text-align: center;
+	text-decoration: none;
+	color: #000000;
+	border: solid 1px #424242;
+	transition: all 0.5s;
+	text-transform: uppercase;
+}
+nav a:hover {
+	background-color:#4fc3f7; }
+
+	/* SECTION */
+.main {
+	display: grid;
+	grid-template-columns: 400px 400px;
+	grid-template-rows: 255px 255px;
+	grid-gap: 5px
+}
+/*.card1 {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}*/
+.card2 {
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+/*.card3 {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}*/
+
+/*Pie de página*/
+footer {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8em;
+	color: #FFFFFF;
+	background-color: #666;
+	padding: 0.3rem;
+	padding-left: 2.2em;
+}
+
+/*PUNTOS DE RUPTURA*/
+@media (orientation: landscape) {
+section {
+	grid-template-columns: 4fr;
+    grid-template-rows: auto;
+}
+aside {
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+}
+nav ul {
+	flex-direction: row;
+}
+a {
+	margin-right:0.2em;
+}
+}
+
+@media (orientation: portrait) {
+section {
+	grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
+aside {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+nav ul {
+	flex-direction: column;
+}
+nav a {
+	margin-bottom:0.2em;
+}
+}
